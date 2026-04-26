@@ -53,17 +53,12 @@
   --bs-black-rgb: 0, 0, 0;
   --bs-body-color-rgb: 33, 37, 41;
   --bs-body-bg-rgb: 255, 255, 255;
-  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto,
-    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --bs-font-sans-serif:
+    system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --bs-font-serif: "Times New Roman", Times, serif;
-  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
-  --bs-gradient: linear-gradient(
-    180deg,
-    rgba(255, 255, 255, 0.15),
-    rgba(255, 255, 255, 0)
-  );
+  --bs-font-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  --bs-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
   --bs-body-font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   --bs-body-font-size: 1rem;
   --bs-body-font-weight: 400;
@@ -86,11 +81,12 @@
   --bs-highlight-bg: #fff3cd;
 }
 
-/* Global styles */
 
+/* Global styles */
 * {
   box-sizing: border-box;
 }
+
 img {
   max-width: 100%;
 }
@@ -109,6 +105,7 @@ a:visited {
 a:hover {
   color: var(--bs-link-hover-color);
 }
+
 
 /* Skip links styling */
 .skip-links ul {
@@ -131,12 +128,13 @@ a:hover {
   z-index: 9999;
 }
 
-/* Title and logo styling */
 
+/* Title and logo styling */
 .site-title {
   display: flex;
   align-items: center;
 }
+
 .site-title > span {
   font-size: 1rem;
   margin-left: 0.3em;
@@ -152,8 +150,8 @@ a:hover {
   border-right: 13px solid transparent;
 }
 
-/* Utility styles */
 
+/* Utility styles */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -170,4 +168,114 @@ a:hover {
 svg {
   background-color: var(--bs-black);
   fill: white;
+}
+
+
+/* Global navbar styling */
+.global-header {
+  background-color: var(--bs-black);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  fill: white;
+}
+
+.global-header a:link,
+.global-header a:visited,
+#park-header a:link,
+#park-header a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.global-header .icon {
+  width: 20px;
+  height: 20px;
+}
+
+.global-header__right {
+  display: flex;
+  align-items: center;
+}
+
+.global-header__right .search-icon {
+  padding: 0 1rem;
+  margin-top: 6px;
+}
+
+.global-header__right button {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1rem;
+  padding: 1.2em;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  border-left: 1px solid var(--bs-grey-5);
+}
+
+
+/* Hero banner */
+.hero-banner {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.hero-banner > img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
+.hero-banner__content {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  grid-column: 1/2;
+  grid-row: 2/3;
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 0.5em 1em;
+}
+
+.hero-banner__title {
+  font-size: 1.8em;
+}
+
+.hero-banner__subtitle {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+}
+
+
+/* Park nav styling */
+.park-nav > ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(--bs-black);
+  font-size: 0.8rem;
+}
+
+.park-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.8em 2em;
+}
+
+.park-nav a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.park-nav svg {
+  width: 24px;
+  height: 24px;
 }
