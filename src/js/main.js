@@ -1,3 +1,8 @@
+// We can do this kind of import bc we're using vite.
+// Vite let's you import CSS directly inside your JS file.
+import "../css/style.css";
+import "../css/home.css";
+
 import { getParkData, getInfoLinks } from "./parkService.mjs";
 import setHeaderFooter from "./setHeaderFooter.mjs";
 import { mediaCardTemplate } from "./templates.mjs";
