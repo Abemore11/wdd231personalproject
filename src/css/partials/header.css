@@ -97,9 +97,9 @@
   font-size: 0.8rem;
 }
 
-/* Park nav styling */
+/* Global nav styling */
 
-.park-nav > ul {
+.global-nav > ul {
   list-style: none;
   padding-left: 0;
   margin: 0;
@@ -109,7 +109,7 @@
   background-color: var(--bs-black);
   font-size: 0.8rem;
 }
-.park-nav a {
+.global-nav a {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -117,10 +117,52 @@
   /* height: 50px; */
   padding: 0.8em 2em;
 }
-.park-nav a:hover {
+.global-nav a:hover {
   background-color: rgba(255, 255, 255, 0.3);
 }
-.park-nav svg {
+.global-nav svg {
   width: 24px;
   height: 24px;
+}
+
+.global-nav {
+  width: 100%;
+  grid-column: 1/3;
+  border-top: 1px solid #333;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+
+.global-nav button {
+  background-color: transparent;
+  border: 0;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.global-nav svg {
+  --icon-color: white;
+}
+
+.global-nav__toggle--closed {
+  display: flex;
+  align-items: center;
+}
+
+.global-nav__toggle--open {
+  display: none;
+  align-items: center;
+}
+
+.global-nav__toggle[aria-expanded="true"] .global-nav__toggle--closed {
+  display: none;
+}
+
+.global-nav__toggle[aria-expanded="true"] .global-nav__toggle--open {
+  display: flex;
+}
+
+.global-nav.show {
+  max-height: 1000px;
 }
